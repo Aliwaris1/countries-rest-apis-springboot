@@ -22,7 +22,8 @@ public class CountryListService {
         this.restTemplate = restTemplate;
         this.objectMapper = objectMapper;
     }
-    public List<CountryList> getAllCountries() { // this function will get all the countries name and country code
+    // this function will get all the countries name and country code
+    public List<CountryList> getAllCountries() {
         List<CountryList> countries = new ArrayList<>();
         try {
             String url = "https://restcountries.com/v3.1/all/";
@@ -40,7 +41,7 @@ public class CountryListService {
                 }
             }
         } catch (Exception e) {
-            // Handle exceptions, log them, and return an empty list.
+            // this actually handle exceptions, log them, and return an empty list.
             e.printStackTrace();
         }
 

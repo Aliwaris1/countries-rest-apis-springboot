@@ -1,7 +1,7 @@
 package com.restcountries.callingexternalapi.beans;
 
-
-public class CountryList { // this class will return all the countries containing country name and code
+// this class will return all the countries containing country name and code
+public class CountryList {
 	private String name;
 	private String countryCode;
 

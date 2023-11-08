@@ -19,8 +19,8 @@ public class CountryInfoService {
         this.restTemplate = restTemplate;
         this.objectMapper = objectMapper;
     }
-
-    public CountryInfo getCountryInfoByName(String name) { //this function actually return country info based on the country name
+    //this function actually return country info based on the country name
+    public CountryInfo getCountryInfoByName(String name) {
         try {
             String url = "https://restcountries.com/v3.1/name/" + name;
             String jsonResponse = restTemplate.getForObject(url, String.class);
@@ -40,8 +40,8 @@ public class CountryInfoService {
                     return countryInfo;
                 }
             }
-        } catch (Exception e) {              // this actually handle exceptions, log them, and return null or throw a custom exception.
-
+        } catch (Exception e) {
+// this actually handle exceptions, log them, and return null or throw a custom exception.
             e.printStackTrace();
         }
 
